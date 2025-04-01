@@ -5,9 +5,8 @@ import { UserService } from './user.service';
 import { RedisModule } from '../redis/redis.module';
 
 @Module({
-  imports: [RedisModule], // Makes RedisService available
+  imports: [RedisModule],
   controllers: [UserController],
   providers: [UserService],
-  exports: [UserService], // If other modules need UserService
 })
 export class UserModule {}
